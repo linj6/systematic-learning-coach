@@ -1,32 +1,37 @@
-# Standalone documentation standard
+# 可独立阅读的知识归档规范
 
-A learning artifact must be understandable months later without the original conversation. Preserve the **reasoning that produced the conclusion**, not merely a checklist of terms.
+学习资料应当在数月后脱离原始聊天记录仍能被理解。必须保留**结论背后的推导过程**，而不是只整理关键词或结论清单。
 
-## Recommended structure
-1. Purpose, scope and prerequisite map.
-2. Architecture/concept relationships and key components.
-3. End-to-end flow with numbered explanation.
-4. Causal mechanism, intermediate derivation and design alternatives.
-5. Concrete worked example and edge/failure cases.
-6. Misconceptions: original mistaken claim, cause, corrected model, transfer rule.
-7. Full questions and independently usable answers (not keyword fragments).
-8. Practice: setup, versions, steps, prediction, actual outputs, interpretation, limitations and reproducibility.
-9. Summary, unresolved questions and future retrieval prompts.
+## 一、推荐文档结构
 
-Adapt headings to the subject; do not invent experiments or corrections just to fill a template.
+1. 学习目的、适用范围与前置知识地图。
+2. 整体架构、概念关系与核心组件。
+3. 端到端流程及逐步说明。
+4. 因果机制、中间推导与方案取舍。
+5. 具体案例、边界条件及故障场景。
+6. 常见误区：原始错误判断、错误原因、修正后的模型和迁移规则。
+7. 完整自检问题与能够独立阅读的答案，不能只有关键词。
+8. 实践记录：环境、版本、步骤、预测、实际输出、解释、局限及复现方法。
+9. 核心总结、遗留问题与后续主动回忆题。
 
-## Diagrams
-Prefer editable Mermaid for architecture, sequence, state transitions, lifecycles and failure windows. Every diagram needs explanatory prose and consistency checks. Preserve significant diagrams in context, not in a disconnected image dump.
+根据学科特点调整章节，不得为了填满模板而编造实验、问题或纠错过程。
 
-## Acceptance checklist
-- Clear whole-to-part hierarchy.
-- Reasoning and causal intermediate steps retained.
-- At least one concrete example for abstract core ideas.
-- Important diagrams included and explained.
-- Critical misconceptions and corrections retained.
-- Complete, answerable review questions.
-- Actual evidence distinguished from predictions and external reports.
-- Scope aligned with the learner's goal.
-- Readable without chat history.
+## 二、图示要求
 
-Review the artifact against this checklist before committing. If source material is unavailable, say so and avoid inventing a complete reconstruction.
+优先使用可编辑的 Mermaid 表达架构、时序、状态变化、消息生命周期与故障窗口。每张重要图都需要文字解读，并检查图文是否一致。
+
+应把关键图示放在对应知识上下文中，而不是将所有图片集中到一个缺乏解释的图库。
+
+## 三、归档验收清单
+
+- [ ] 具有清晰的从整体到局部的章节层次。
+- [ ] 保留原理推导与关键因果环节。
+- [ ] 抽象核心概念至少有一个具体案例。
+- [ ] 重要架构图和流程图已经归档并解释。
+- [ ] 关键误解、纠错过程和适用边界得到保留。
+- [ ] 自检问题附有完整、可独立使用的答案。
+- [ ] 实际证据与理论预测、外部资料清晰区分。
+- [ ] 学习范围与目标一致，没有无意义扩展。
+- [ ] 脱离聊天记录仍能理解和复习。
+
+提交文档前应按照以上清单验收。如果原始材料不可用，必须说明限制，不得虚构完整学习过程。
