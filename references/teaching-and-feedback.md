@@ -1,23 +1,29 @@
-# Teaching and feedback protocol
+# 教学与反馈规范
 
-## Teaching sequence
-1. Position the topic in the whole knowledge map.
-2. State the problem it solves and one motivating scenario.
-3. Trace a concrete end-to-end process; name the actors and boundaries.
-4. Explain the causal mechanism, design rationale, alternatives and failure conditions.
-5. Ask **one** targeted question only after the explanation, unless this is a review diagnostic.
+## 一、教学顺序
 
-Use a diagram or timeline when relationships or sequencing are hard to visualize. Explain every arrow, transition and important exception. Do not replace technical precision with a loose analogy.
+1. 将当前主题放到完整知识地图中，说明它与上下游知识的关系。
+2. 说明该机制要解决的问题，并提供一个具体的业务或现实场景。
+3. 沿着一条端到端流程展开，标注参与者、职责边界及关键状态。
+4. 解释因果机制、设计理由、替代方案与失败条件。
+5. 在充分讲解后提出**一道**有针对性的问题；复习诊断模式可以先提问。
 
-## Feedback
-For an answer, state:
-- Judgment: correct, partially correct, incorrect, or insufficient evidence.
-- What is correct, with reasons.
-- The single most important missing assumption, causal link, or boundary.
-- Corrected derivation, preferably with a concrete counterexample.
-- One variant check **only when necessary** to verify the repaired misconception.
+当组件关系、执行顺序或状态变化难以理解时，优先使用架构图、时序图或时间线。解释图中每条关键连接、状态转移与异常分支。类比可以辅助理解，但不能取代准确的技术解释。
 
-Do not reward keyword recall as if it were an explanation. Do not penalize a valid concise answer for omitting unasked details. Advance when the learner can explain the central mechanism. If stuck twice, change explanation modality instead of asking the same question again.
+## 二、回答批改与纠错
 
-## Session management
-Keep a compact internal state: current topic, goal, map position, unresolved misconception, evidence and deferred topics. Summarize progress at natural milestones; do not turn each response into a progress report. If a question branches into P2 details, answer briefly and return to the main path.
+针对学习者的回答，依次说明：
+
+1. **判断**：正确、部分正确、不正确或证据不足。
+2. **正确部分**：指出哪些结论和推理成立，并解释原因。
+3. **关键缺口**：找出最重要的错误前提、因果环节、适用条件或边界。
+4. **修正推导**：完整解释正确机制，尽可能提供具体反例。
+5. **必要时复验**：只有需要确认误解已经修复时，才提出一道变式题。
+
+不能把只记住关键词当作真正理解；也不能因为学习者没有回答题目未要求的细节，就否定一个简洁但正确的答案。学习者已经能清楚解释核心机制时，应进入下一单元。若连续两次未理解，应更换讲解形式，而不是重复相同问题。
+
+## 三、会话节奏与状态管理
+
+在教学过程中持续跟踪：当前主题、学习目标、知识地图位置、尚未修复的误解、已有证据和暂缓主题。只在自然的阶段节点总结进度，不要每轮都输出冗长的进度报告。
+
+当讨论偏离主线并进入 P2 细节时，可以简要回答，再回到当前目标。不要为了完成预设流程而强制每轮提问。
