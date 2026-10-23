@@ -1,29 +1,38 @@
-# Practice, evidence and assessment
+# 实践、证据与掌握度评估规范
 
-## Verification protocol
-Define question and falsifiable prediction → select minimal environment/data and controls → run or inspect → capture original output → compare to prediction → explain discrepancies → document limitations and reproduction.
+## 一、实践验证流程
 
-Never fabricate logs, benchmark values, screenshots, citations, or successful runs.
+**定义问题与可证伪预测 → 选择最小环境、数据及控制变量 → 执行或观察 → 保存原始输出 → 与预测对比 → 解释差异 → 记录局限与复现方法。**
 
-## Evidence labels
-- **Predicted**: expected outcome from reasoning, not observed.
-- **Reconstructed**: inference from historical notes or logs; not a fresh run.
-- **Executed**: actually run, with scope and environment.
-- **Observed**: manually inspected in stated conditions.
-- **External**: reported by a source; provenance and limitations needed.
+不得编造日志、压测数值、截图、资料来源或实验成功记录。
 
-Distinguish correlation from causation and model assumptions from established facts. Financial backtests must account for look-ahead/survivorship bias, costs and out-of-sample evaluation; past performance is not predictive proof.
+## 二、证据状态标记
 
-## Mastery
-- **L1 Recognize**: identify concept, purpose and parts.
-- **L2 Explain**: independently explain mechanism, ordering, causes and conditions.
-- **L3 Apply**: solve an unfamiliar case or design a viable approach with tradeoffs.
-- **L4 Validate and diagnose**: test, debug or critically evaluate under real constraints.
+- **理论预测**：根据原理推导的预期结果，尚未实际观察。
+- **历史重建**：依据既有笔记、日志或记录进行推断，并非本次重新执行。
+- **实际执行**：确实运行过实验，需注明环境、条件和覆盖范围。
+- **人工观察**：在明确条件下人工查看到的现象。
+- **外部资料**：由第三方来源报告的结果，需保留来源与局限。
 
-Assign levels provisionally with date, evidence, and whether hints were required. A single correct response is insufficient for L4 or durable retention.
+明确区分相关性与因果性、模型假设与已证实事实。金融投资领域的回测还应考虑前视偏差、幸存者偏差、交易成本和样本外验证；历史收益不能证明未来收益。
 
-## Priority and stopping
-P0 foundational, P1 useful, P2 defer. Stop a unit when the learner meets the goal, resolves consequential misconceptions and completes necessary verification. If an experiment is too costly, explicitly note what remains unverified.
+## 三、掌握度等级
 
-## Retention (experimental)
-Use retrieval-based short, weekly and monthly follow-ups adjusted to actual forgetting. Record what improves recall; do not present a fixed interval as empirically validated for this learner.
+- **L1 认识**：能够识别概念、目的和主要组成。
+- **L2 理解**：能够独立解释机制、执行顺序、原因和适用条件。
+- **L3 应用**：能够分析新案例，或设计可行方案并说明取舍。
+- **L4 验证与诊断**：能够在真实约束下进行验证、排障或批判性评估。
+
+等级属于基于当前证据的阶段判断。记录评估日期、依据，以及回答是否依赖提示。一次回答正确不足以认定 L4 或长期记忆稳固。
+
+## 四、优先级与停止条件
+
+- **P0**：支撑知识体系的核心基础，优先学习。
+- **P1**：与目标密切相关的重要扩展，按需深入。
+- **P2**：低优先级细节，记录后暂缓。
+
+当学习者达到目标等级、修复关键误解、完成必要验证时，即可结束单元。若实验成本过高，应明确记录哪些结论尚未验证，而不是默认成立。
+
+## 五、长期保持（待验证）
+
+建议使用主动回忆，安排短期、跨周和跨月复习，并根据实际遗忘情况调整。记录哪些方式改善了记忆效果；不要把固定间隔描述为已在该学习者身上得到实证验证。
