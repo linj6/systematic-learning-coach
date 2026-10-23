@@ -1,20 +1,34 @@
-# Software engineering domain adapter
+# 软件工程领域适配规范
 
-Use the core learning loop from SKILL.md. Adapt the evidence and examples, not the underlying coaching principles.
+遵循仓库根目录 `SKILL.md` 中的通用学习闭环。需要适配的是具体案例、实践方式与证据标准，而不是改变核心教学原则。
 
-## Recommended starting map
-Architecture and responsibilities → request/data lifecycle → concurrency and consistency → failure modes and recovery → performance and observability → design tradeoffs.
+## 一、推荐知识主线
 
-## Techniques
-- Follow one real business request or message end to end; label components, ownership, transaction boundaries and guarantees.
-- For database topics, show SQL, execution path, isolation and transaction timelines.
-- For concurrency, use minimal reproducible code and explicit interleavings.
-- For MQ, show producer → broker → consumer → ACK/retry/DLQ and failure windows; distinguish broker behavior from application policy.
-- For JVM/operations, use metrics, logs, heap/thread evidence and controlled fault injection.
-- For performance, state workload, baseline, throughput/latency/error metrics, resource limits and confounders.
+**系统架构与职责 → 请求或数据的完整生命周期 → 并发与一致性 → 故障场景与恢复 → 性能和可观测性 → 设计取舍。**
 
-## Experiments
-Ask the learner to predict first. Provide minimal setup and cleanup. Do not claim benchmark improvements without measured data. Distinguish local simulated failure from production incident.
+根据专项特点调整主线，不强制每个主题都覆盖全部内容。
 
-## Interview review
-Test explanation, edge cases, tradeoffs and incident diagnosis, not memorized keywords. Prefer one realistic follow-up over a long list of shallow questions.
+## 二、教学与案例设计
+
+- **业务流程**：从一条真实业务请求或消息出发，追踪端到端流程，标明核心组件、职责、事务边界与可靠性保证范围。
+- **数据库**：结合 SQL、执行路径、事务隔离级别和时间线解释原理。
+- **并发编程**：使用最小可复现代码，明确线程交错顺序与可能结果。
+- **消息队列（MQ）**：展示生产者 → Broker → 消费者 → ACK/重试/死信队列（DLQ）的完整流程及故障窗口；明确区分 Broker 内建行为与应用层策略。不同 MQ 产品机制存在差异，不得直接照搬 RabbitMQ 的实现细节到 RocketMQ。
+- **JVM 与线上排障**：结合监控指标、日志、堆/线程证据及受控故障注入。
+- **性能优化**：说明负载模型、基线、吞吐量、延迟、错误率、资源限制和干扰变量。
+
+## 三、实验要求
+
+先请学习者预测实验结果，再提供最小化环境、操作步骤和清理方法。没有实际测量数据时，不能声称吞吐量或延迟得到改善。必须区分本地模拟故障与真实生产事故。
+
+## 四、面试与复习评估
+
+重点考察能否解释原理、分析边界、权衡方案及诊断故障，而不是机械背诵术语。优先使用一道有代表性的真实场景追问，避免一次性罗列大量浅层问题。
+
+## 五、RocketMQ 首轮验证注意事项
+
+首轮试用从 RocketMQ 核心架构和一条订单消息的完整流程开始，明确 NameServer、Broker、Topic、Message Queue、Producer、Consumer Group 的职责及相互关系。
+
+先解释消息如何路由、存储、投递与确认，再逐步扩展到消费模式、重试、可靠性与故障恢复。具体机制应标明 RocketMQ 版本及消费模型，不得将不同版本或 RabbitMQ 的机制混为一谈。
+
+验证结果应记录到独立复盘中，区分学习者实际反馈与教练的推测。
